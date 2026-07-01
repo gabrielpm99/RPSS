@@ -5,19 +5,13 @@ Game::Game() {
     window.setFramerateLimit(60);
     estadoAtual = EstadoJogo::Menu;
 
-    if (fonte.openFromFile("../assets/arial.ttf")) {
+    if (fonte.openFromFile("../assets/fonte.ttf")) {
 
         sf::Vector2u tamanhoJanela = window.getSize();
 
-        textoOponente.setCharacterSize(50);
-        textoResultado.setCharacterSize(55);
-        
-        textoTempo.setCharacterSize(50);
-        textoTempo.setFillColor(sf::Color(255, 100, 100));
-
-        textoPlacar.setCharacterSize(45);
-        textoVidas.setCharacterSize(45);
-        textoVidas.setFillColor(sf::Color::Green);
+        textoPlacar.setCharacterSize(120);
+        textoPlacar.setFillColor(sf::Color(167, 0, 0));
+        textoPlacar.setLetterSpacing(12.0f);
     }
 
     carregarTexturas();
@@ -33,48 +27,90 @@ void Game::carregarTexturas() {
         spriteBackground.setScale(sf::Vector2f(1440.0f / tamanhoMenuBackground.x, 960.0f / tamanhoMenuBackground.y));
         spriteBackground.setPosition(sf::Vector2f(0.0f, 0.0f));
     }
-    if(texturaLogoMenu.loadFromFile("../assets/rockpaperscissor.png")) {
+    if(texturaLogoMenu.loadFromFile("../assets/menu/rockpaperscissor.png")) {
         spriteLogoMenu.setTexture(texturaLogoMenu, true);
         spriteLogoMenu.setPosition(sf::Vector2f(0.0f, 150.0f));
     }
-    if(texturaScribbled01Menu.loadFromFile("../assets/scribbled001.png") && texturaScribbled02Menu.loadFromFile("../assets/scribbled002.png")) {
+    if(texturaScribbled01Menu.loadFromFile("../assets/menu/scribbled001.png") && texturaScribbled02Menu.loadFromFile("../assets/menu/scribbled002.png")) {
         spriteScribbledMenu.setTexture(texturaScribbled01Menu, true);
         sf::Vector2u tamanhoScribbled = texturaScribbled01Menu.getSize();
         spriteScribbledMenu.setOrigin(sf::Vector2f(tamanhoScribbled.x / 2.0f, tamanhoScribbled.y / 2.0f));
         spriteScribbledMenu.setPosition(sf::Vector2f(720.0f, 650.0f));
     }
-    if(texturaSetaMenu.loadFromFile("../assets/arrow001.png")) {
+    if(texturaSetaMenu.loadFromFile("../assets/menu/arrow001.png")) {
         spriteSetaMenu.setTexture(texturaSetaMenu, true);
         sf::Vector2u tamanhoSeta = texturaSetaMenu.getSize();
         spriteSetaMenu.setOrigin(sf::Vector2f(tamanhoSeta.x / 2.0f, tamanhoSeta.y / 2.0f));
         spriteSetaMenu.setPosition(sf::Vector2f(625.0f, 800.0f));
     }
-    if(texturaStartMenu.loadFromFile("../assets/start001.png")) {
+    if(texturaStartMenu.loadFromFile("../assets/menu/start001.png")) {
         spriteStartMenu.setTexture(texturaStartMenu, true);
         sf::Vector2u tamanhoStart = texturaStartMenu.getSize();
         spriteStartMenu.setOrigin(sf::Vector2f(0, tamanhoStart.y / 2.0f));
         spriteStartMenu.setPosition(sf::Vector2f(700.0f, 800.0f));
     }
-    if(texturaTutorialMenu.loadFromFile("../assets/tutorial001.png")) {
+    if(texturaTutorialMenu.loadFromFile("../assets/menu/tutorial001.png")) {
         spriteTutorialMenu.setTexture(texturaTutorialMenu, true);
         sf::Vector2u tamanhoTutorial = texturaTutorialMenu.getSize();
         spriteTutorialMenu.setOrigin(sf::Vector2f(0, tamanhoTutorial.y / 2.0f));
         spriteTutorialMenu.setPosition(sf::Vector2f(600.0f, 900.0f));
     }
-    if(texturaMaoIntermediaria01.loadFromFile("../assets/handint001.png") &&
-        texturaMaoIntermediaria02.loadFromFile("../assets/handint002.png") &&
-        texturaMaoPapel.loadFromFile("../assets/handpaper001.png") &&
-        texturaMaoTesoura.loadFromFile("../assets/handscissor001.png") &&
-        texturaMaoPedra.loadFromFile("../assets/handrock001.png") &&
-        texturaMaoCima.loadFromFile("../assets/handup001.png") &&
-        texturaMaoDireita.loadFromFile("../assets/handright001.png") &&
-        texturaMaoEsquerda.loadFromFile("../assets/handleft001.png") &&
-        texturaMaoBaixo.loadFromFile("../assets/handdown001.png")) 
+    if(UIJogo.loadFromFile("../assets/uiplayerrpss/uiplayer001.png")) {
+        spriteUIJogo.setTexture(UIJogo, true);
+        spriteUIJogo.setPosition(sf::Vector2f(0.0f, 0.0f));
+    }
+    if(texturaMaoInt01.loadFromFile("../assets/jogador/handint001.png") &&
+        texturaMaoInt02.loadFromFile("../assets/jogador/handint002.png") &&
+        texturaMaoPapel.loadFromFile("../assets/jogador/handpaper001.png") &&
+        texturaMaoTesoura.loadFromFile("../assets/jogador/handscissor001.png") &&
+        texturaMaoPedra.loadFromFile("../assets/jogador/handrock001.png") &&
+        texturaMaoCima.loadFromFile("../assets/jogador/handup001.png") &&
+        texturaMaoDireita.loadFromFile("../assets/jogador/handright001.png") &&
+        texturaMaoEsquerda.loadFromFile("../assets/jogador/handleft001.png") &&
+        texturaMaoBaixo.loadFromFile("../assets/jogador/handdown001.png")) 
     {
-        spriteMaoJogador.setTexture(texturaMaoIntermediaria01, true);
-        sf::Vector2u tamanhoMao = texturaMaoIntermediaria01.getSize();
+        spriteMaoJogador.setTexture(texturaMaoInt01, true);
+        sf::Vector2u tamanhoMao = texturaMaoInt01.getSize();
         spriteMaoJogador.setOrigin(sf::Vector2f(tamanhoMao.x, tamanhoMao.y));
         spriteMaoJogador.setPosition(sf::Vector2f(1440.0f, 960.0f));
+    }
+
+    if(texturaOponenteInt01.loadFromFile("../assets/oponente/girlint001.png") &&
+        texturaOponenteInt02.loadFromFile("../assets/oponente/girlint002.png") &&
+        texturaOponentePapel.loadFromFile("../assets/oponente/girlpaper001.png") &&
+        texturaOponenteTesoura.loadFromFile("../assets/oponente/girlscissor001.png") &&
+        texturaOponentePedra.loadFromFile("../assets/oponente/girlrock001.png") &&
+        texturaOponenteCimaFase02.loadFromFile("../assets/oponente/girltype002up001.png") &&
+        texturaOponenteDireitaFase02.loadFromFile("../assets/oponente/girltype002right001.png") &&
+        texturaOponenteEsquerdaFase02.loadFromFile("../assets/oponente/girltype002left001.png") &&
+        texturaOponenteBaixoFase02.loadFromFile("../assets/oponente/girltype002down001.png") &&
+        texturaOponenteCimaFase03.loadFromFile("../assets/oponente/girltype003up001.png") &&
+        texturaOponenteDireitaFase03.loadFromFile("../assets/oponente/girltype003right001.png") &&
+        texturaOponenteEsquerdaFase03.loadFromFile("../assets/oponente/girltype003left001.png") &&
+        texturaOponenteBaixoFase03.loadFromFile("../assets/oponente/girltype003down001.png") &&
+        texturaOponenteVitoria01.loadFromFile("../assets/oponente/girlwin001.png") &&
+        texturaOponenteVitoria02.loadFromFile("../assets/oponente/girlwin002.png") &&
+        texturaOponenteDerrota.loadFromFile("../assets/oponente/girlloss001.png") &&
+        texturaOponenteOlhosCima.loadFromFile("../assets/oponente/girleyesup001.png") &&
+        texturaOponenteOlhosDireita.loadFromFile("../assets/oponente/girleyesright001.png") &&
+        texturaOponenteOlhosEsquerda.loadFromFile("../assets/oponente/girleyesleft001.png") &&
+        texturaOponenteOlhosBaixo.loadFromFile("../assets/oponente/girleyesdown001.png"))
+    {
+        spriteOponente.setTexture(texturaOponenteInt01, true);
+        sf::Vector2u tamanhoOponente = texturaOponenteInt01.getSize();
+        spriteOponente.setOrigin(sf::Vector2f(0, 0));
+        spriteOponente.setPosition(sf::Vector2f(50.0f, 150.0f));
+    }
+
+    if(texturaVidaCheia.loadFromFile("../assets/uiplayerrpss/heartnew001.png") &&
+        texturaVidaVazia.loadFromFile("../assets/uiplayerrpss/heartnew002.png")) 
+    {
+        spriteVida001.setTexture(texturaVidaCheia, true);
+        spriteVida001.setPosition(sf::Vector2f(100.0f, -10.0f));
+        spriteVida002.setTexture(texturaVidaCheia, true);
+        spriteVida002.setPosition(sf::Vector2f(200.0f, -5.0f));
+        spriteVida003.setTexture(texturaVidaCheia, true);
+        spriteVida003.setPosition(sf::Vector2f(300.0f, 0.0f));
     }
 }
 
@@ -86,6 +122,7 @@ void Game::iniciarRound(EstadoJogo novoEstado) {
     estadoAtual = novoEstado;
     escolhaJogador = 0; // Zera a sua escolha
     jogadaFinalizada = false; // Avisa que o tempo tá rolando
+    resultadoCalculado = false; // Avisa que o resultado ainda não foi calculado
     
     // O oponente já faz a escolha dele AQUI, no inicio da rodada
     if (estadoAtual == EstadoJogo::Round1) {
@@ -143,6 +180,7 @@ void Game::processarEventos() {
                 }
                 if(keyPressed->code == sf::Keyboard::Key::Enter) {
                     if(opcaoMenu == 1) {
+                        tempoLimite = TEMPO_INICIAL;
                         vidas = 3;
                         pontuacao = 0;
                         iniciarRound(EstadoJogo::Round1); // Chama a função nova
@@ -183,13 +221,26 @@ void Game::atualizar() {
     }
     
     if(estadoAtual == EstadoJogo::Round1 || estadoAtual == EstadoJogo::Round2 || estadoAtual == EstadoJogo::Round3) {
+        if (vidas >= 1) spriteVida001.setTexture(texturaVidaCheia, true);
+        else spriteVida001.setTexture(texturaVidaVazia, true);
+
+        if (vidas >= 2) spriteVida002.setTexture(texturaVidaCheia, true);
+        else spriteVida002.setTexture(texturaVidaVazia, true);
+
+        if (vidas >= 3) spriteVida003.setTexture(texturaVidaCheia, true);
+        else spriteVida003.setTexture(texturaVidaVazia, true);
+
         sf::Vector2u tamanhoJanela = window.getSize();
 
-        // Arrays de vocabulário para facilitar
+        // Arrays de ponteiros para as texturas do jogador
         sf::Texture* opcoesJankenpoJogador[] = {&texturaMaoPapel, &texturaMaoTesoura, &texturaMaoPedra};
         sf::Texture* opcoesDirecaoJogador[] = {&texturaMaoCima, &texturaMaoDireita, &texturaMaoEsquerda, &texturaMaoBaixo};
-        string opcoesJankenpo[] = {"", "Papel", "Tesoura", "Pedra"};
-        string opcoesDirecao[] = {"", "Cima", "Direita", "Esquerda", "Baixo"};
+
+        // Arrays de ponteiros para as texturas do oponente
+        sf::Texture* opcoesJankenpoOponente[] = {&texturaOponentePapel, &texturaOponenteTesoura, &texturaOponentePedra};
+        sf::Texture* opcoesDirecaoOponenteFase02[] = {&texturaOponenteCimaFase02, &texturaOponenteDireitaFase02, &texturaOponenteEsquerdaFase02, &texturaOponenteBaixoFase02};
+        sf::Texture* opcoesDirecaoOponenteFase03[] = {&texturaOponenteCimaFase03, &texturaOponenteDireitaFase03, &texturaOponenteEsquerdaFase03, &texturaOponenteBaixoFase03};
+        sf::Texture* opcoesDirecaoOponenteOlhos[] = {&texturaOponenteOlhosCima, &texturaOponenteOlhosDireita, &texturaOponenteOlhosEsquerda, &texturaOponenteOlhosBaixo};
 
         // ========================================================
         // 1. O TEMPO ESTÁ ROLANDO (A MESA ESTÁ ABERTA)
@@ -197,39 +248,55 @@ void Game::atualizar() {
         if(!jogadaFinalizada) {
             float tempoRestante = tempoLimite - clockPrincipal.getElapsedTime().asSeconds();
             float tempoPassado = clockPrincipal.getElapsedTime().asSeconds();
-            float tempoPorFrame = tempoLimite / 5.0f;
 
             // Mostra o cronômetro descendo na tela
             if(tempoRestante > 0.0f) {
-                textoTempo.setString(L"Tempo: " + std::to_wstring(tempoRestante).substr(0, 3) + L"s");
-
                 // Mostra o que você selecionou até agora
                 if (estadoAtual == EstadoJogo::Round1) {
-                    if(tempoPassado > tempoPorFrame * 4) spriteMaoJogador.setTexture(texturaMaoIntermediaria02, true);
-                    else if(tempoPassado > tempoPorFrame * 3) spriteMaoJogador.setTexture(texturaMaoIntermediaria01, true);
-                    else if(tempoPassado > tempoPorFrame * 2) spriteMaoJogador.setTexture(texturaMaoIntermediaria02, true);
-                    else if(tempoPassado > 0.0f) spriteMaoJogador.setTexture(texturaMaoIntermediaria01, true);
-                    
-                    // INDÍCIOS DO ROUND 1 (Oponente se preparando)
-                    string indicios[] = {"", "[Oponente relaxa a mao...]", "[Oponente levanta 2 dedos...]", "[Oponente fecha a mao...]"};
-                    textoOponente.setString(indicios[escolhaOponente]);
-                    textoOponente.setFillColor(sf::Color(150, 150, 150)); // Cinza pra parecer uma dica
+                    if(tempoPassado > tempoLimite * 0.8f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt02, true);
+                        spriteOponente.setTexture(texturaOponenteInt02, true);
+                    }
+                    else if(tempoPassado > tempoLimite * 0.6f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt01, true);
+                        spriteOponente.setTexture(texturaOponenteInt01, true);
+                    }
+                    else if(tempoPassado > tempoLimite * 0.4f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt02, true);
+                        spriteOponente.setTexture(texturaOponenteInt02, true);
+                    }
+                    else if(tempoPassado >= 0.0f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt01, true);
+                        spriteOponente.setTexture(texturaOponenteInt01, true);
+                    }
                 } 
                 else if (estadoAtual == EstadoJogo::Round2) {
-                    if(tempoPassado > tempoPorFrame * 3) spriteMaoJogador.setTexture(texturaMaoIntermediaria02, true);
-                    else if(tempoPassado > 0.0f) spriteMaoJogador.setTexture(texturaMaoIntermediaria01, true);
+                    if(tempoPassado > tempoLimite * 0.5f) {
+                        spriteOponente.setTexture(*opcoesDirecaoOponenteOlhos[escolhaOponente - 1], true);
+                    } else if(tempoPassado >= 0.0f) {
+                        spriteOponente.setTexture(texturaOponenteInt01, true);
+                    }
 
-                    // No Round 2, o NPC olha primeiro e fica assim durante o tempo todo
-                    textoOponente.setString("NPC OLHA para: " + opcoesDirecao[escolhaOponente]);
-                    textoOponente.setFillColor(sf::Color::White);
+                    if(tempoPassado > tempoLimite * 0.8f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt02, true);
+                    }
+                    else if(tempoPassado >= 0.0f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt01, true);
+                    }
                 } 
                 else if (estadoAtual == EstadoJogo::Round3) {
-                    if(tempoPassado > tempoPorFrame * 3) spriteMaoJogador.setTexture(texturaMaoIntermediaria02, true);
-                    else if(tempoPassado > 0.0f) spriteMaoJogador.setTexture(texturaMaoIntermediaria01, true);
+                    if(tempoPassado > tempoLimite * 0.5f) {
+                        spriteOponente.setTexture(*opcoesDirecaoOponenteOlhos[escolhaOponente - 1], true);
+                    } else if(tempoPassado >= 0.0f) {
+                        spriteOponente.setTexture(texturaOponenteInt01, true);
+                    }
 
-                    // No Round 3, o NPC aponta primeiro e fica assim durante o tempo todo
-                    textoOponente.setString("NPC APONTA para: " + opcoesDirecao[escolhaOponente]);
-                    textoOponente.setFillColor(sf::Color::White);
+                    if(tempoPassado > tempoLimite * 0.8f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt02, true);
+                    }
+                    else if(tempoPassado >= 0.0f) {
+                        spriteMaoJogador.setTexture(texturaMaoInt01, true);
+                    }
                 }
             } 
             // O TEMPO ACABOU! TRAVA A JOGADA.
@@ -239,57 +306,57 @@ void Game::atualizar() {
                 clockJogadaFinalizada.restart();
             }
 
-            textoPlacar.setString(L"Pontos: " + std::to_wstring(pontuacao));
-            textoVidas.setString(L"Vidas: " + std::to_wstring(vidas));
+            wstringstream ss;
+            ss << setfill(L'0') << setw(4) << pontuacao;
+            textoPlacar.setString(ss.str());
+            //textoVidas.setString(L"Vidas: " + std::to_wstring(vidas));
         } 
         
         // ========================================================
         // 2. O TEMPO ACABOU (MOSTRA O RESULTADO)
         // ========================================================
         else {
-            textoTempo.setString("TEMPO ESGOTADO!");
-
-            // Roda as regras de ganho só uma vez quando o texto de resultado ainda está vazio
-            if (textoResultado.getString().isEmpty()) { 
-                
-                textoOponente.setFillColor(sf::Color::White); // Tira o cinza do indício
+            // Se o resultado ainda não foi calculado, calcula o resultado da rodada
+            if (!resultadoCalculado) { 
+                resultadoCalculado = true; // Marca que o resultado já foi calculado
 
                 if (estadoAtual == EstadoJogo::Round1) {
                     if (escolhaJogador != -1) {
                         spriteMaoJogador.setTexture(*opcoesJankenpoJogador[escolhaJogador - 1], true);
                     }
-                    textoOponente.setString("Oponente jogou: " + opcoesJankenpo[escolhaOponente]);
-                } else {
+                } else if (estadoAtual == EstadoJogo::Round2) {
                     if (escolhaJogador != -1) {
                         spriteMaoJogador.setTexture(*opcoesDirecaoJogador[escolhaJogador - 1], true);
                     }
-                    textoOponente.setString("Oponente jogou: " + opcoesDirecao[escolhaOponente]);
+                } else if (estadoAtual == EstadoJogo::Round3) {
+                    if (escolhaJogador != -1) {
+                        spriteMaoJogador.setTexture(*opcoesDirecaoJogador[escolhaJogador - 1], true);
+                    }
                 }
 
                 // REGRAS DO ROUND 1
                 if (estadoAtual == EstadoJogo::Round1) {
                     if (escolhaJogador == -1) {
-                        textoResultado.setString("Derrota por tempo");
-                        textoResultado.setFillColor(sf::Color::Red);
-                        proximoEstado = EstadoJogo::Round1; 
+                        texturaFinalRodada = texturaOponenteVitoria01;
+
+                        proximoEstado = EstadoJogo::Round3;
                     } 
                     else if (escolhaJogador == escolhaOponente) {
-                        textoResultado.setString("Empate");
-                        textoResultado.setFillColor(sf::Color::Yellow);
-                        proximoEstado = EstadoJogo::Round1; 
+                        proximoEstado = EstadoJogo::Round1;
                     }
+                    // CONDICIONAL DE VITÓRIA
                     else if((escolhaJogador == 1 && escolhaOponente == 3) || 
                             (escolhaJogador == 2 && escolhaOponente == 1) || 
                             (escolhaJogador == 3 && escolhaOponente == 2))   
                     {
-                        textoResultado.setString("Vitoria! Round 2...");
-                        textoResultado.setFillColor(sf::Color::Green);
+                        texturaFinalRodada = texturaOponenteDerrota;
                         proximoEstado = EstadoJogo::Round2; 
                     } 
+                    // CONDICIONAL DE DERROTA
                     else {
-                        textoResultado.setString("Derrota");
-                        textoResultado.setFillColor(sf::Color::Red);
-                        proximoEstado = EstadoJogo::Round1; 
+                        texturaFinalRodada = texturaOponenteVitoria01;
+
+                        proximoEstado = EstadoJogo::Round3; 
                     }
                 }
                 
@@ -297,37 +364,36 @@ void Game::atualizar() {
                 else if (estadoAtual == EstadoJogo::Round2) {
                     if (escolhaJogador == escolhaOponente && escolhaJogador != -1) {
                         pontuacao++; 
-                        textoResultado.setString("Vitoria! Round 3...");
-                        textoResultado.setFillColor(sf::Color::Green);
-                        
-                        if (tempoLimite > tempoLimite - 0.5f) {
-                            tempoLimite -= 0.1f; 
-                        }
-                        proximoEstado = EstadoJogo::Round3; 
+                        texturaFinalRodada = texturaOponenteDerrota;
+                        proximoEstado = EstadoJogo::Round1; 
 
                     } else {
-                        textoResultado.setString("Derrota");
-                        textoResultado.setFillColor(sf::Color::Red);
+                        texturaFinalRodada = texturaOponenteVitoria01;
                         proximoEstado = EstadoJogo::Round1; 
+                    }
+
+                    if (tempoLimite > TEMPO_MINIMO) {
+                        tempoLimite -= 0.1f; 
                     }
                 }
 
                 // REGRAS DO ROUND 3
                 else if (estadoAtual == EstadoJogo::Round3) {
                     if (escolhaJogador != escolhaOponente && escolhaJogador != -1) {
-                        textoResultado.setString("Vitoria!");
-                        textoResultado.setFillColor(sf::Color::Green);
+                        texturaFinalRodada = texturaOponenteDerrota;
                         proximoEstado = EstadoJogo::Round1; 
                     } else {
-                        textoResultado.setString("Derrota");
-                        textoResultado.setFillColor(sf::Color::Red);
-                        
+                        texturaFinalRodada = texturaOponenteVitoria01;
                         vidas--; 
                         if (vidas <= 0) {
                             proximoEstado = EstadoJogo::Menu;
                         } else {
                             proximoEstado = EstadoJogo::Round1; 
                         }
+                    }
+
+                    if (tempoLimite > TEMPO_MINIMO) {
+                        tempoLimite -= 0.1f; 
                     }
                 }
             }
@@ -337,30 +403,33 @@ void Game::atualizar() {
         // 3. TRANSIÇÃO DE TELAS (O RESET APÓS 3 SEGUNDOS)
         // ========================================================
         if(jogadaFinalizada) {
-            if(clockJogadaFinalizada.getElapsedTime().asSeconds() >= tempoLimite) { 
-                textoOponente.setString("");
-                textoResultado.setString("");
-
+            float tempoEspera = clockJogadaFinalizada.getElapsedTime().asSeconds();
+            
+            if(tempoEspera < tempoLimite * 0.7f) {
+                if(estadoAtual == EstadoJogo::Round1) {
+                    spriteOponente.setTexture(*opcoesJankenpoOponente[escolhaOponente - 1], true);
+                }
+                else if(estadoAtual == EstadoJogo::Round2) {
+                    spriteOponente.setTexture(*opcoesDirecaoOponenteFase02[escolhaOponente - 1], true);
+                }
+                else if(estadoAtual == EstadoJogo::Round3) {
+                    spriteOponente.setTexture(*opcoesDirecaoOponenteFase03[escolhaOponente - 1], true);
+                }
+            }
+            else if(tempoEspera < tempoLimite * 1.4f) {
+                spriteOponente.setTexture(texturaFinalRodada, true);
+            }
+            else {
+                texturaFinalRodada = texturaOponenteInt01; // Reseta a textura do oponente para a próxima rodada
+                spriteMaoJogador.setTexture(texturaMaoInt01, true);
                 // Pula para a tela seguinte sorteando o oponente de novo!
                 iniciarRound(proximoEstado); 
             }
         }
 
         // ALINHAMENTOS NA TELA (Inalterado)
-        textoTempo.setOrigin(sf::Vector2f(textoTempo.getLocalBounds().size.x / 2.f, textoTempo.getLocalBounds().size.y / 2.f));
-        textoTempo.setPosition(sf::Vector2f(tamanhoJanela.x * 0.5f, tamanhoJanela.y * 0.1f));
-
-        textoVidas.setOrigin(sf::Vector2f(textoVidas.getLocalBounds().size.x / 2.f, textoVidas.getLocalBounds().size.y / 2.f));
-        textoVidas.setPosition(sf::Vector2f(tamanhoJanela.x * 0.2f, tamanhoJanela.y * 0.1f));
-
-        textoPlacar.setOrigin(sf::Vector2f(textoPlacar.getLocalBounds().size.x / 2.f, textoPlacar.getLocalBounds().size.y / 2.f));
-        textoPlacar.setPosition(sf::Vector2f(tamanhoJanela.x * 0.8f, tamanhoJanela.y * 0.1f));
-
-        textoOponente.setOrigin(sf::Vector2f(textoOponente.getLocalBounds().size.x / 2.f, textoOponente.getLocalBounds().size.y / 2.f));
-        textoOponente.setPosition(sf::Vector2f(tamanhoJanela.x * 0.5f, tamanhoJanela.y * 0.3f)); 
-
-        textoResultado.setOrigin(sf::Vector2f(textoResultado.getLocalBounds().size.x / 2.f, textoResultado.getLocalBounds().size.y / 2.f));
-        textoResultado.setPosition(sf::Vector2f(tamanhoJanela.x * 0.5f, tamanhoJanela.y * 0.5f)); 
+        textoPlacar.setOrigin(sf::Vector2f(textoPlacar.getLocalBounds().size.x, 0.0f));
+        textoPlacar.setPosition(sf::Vector2f(1200, -15));
     }
 }
 
@@ -377,12 +446,13 @@ void Game::renderizar() {
         window.draw(spriteSetaMenu);
     }
     else if(estadoAtual == EstadoJogo::Round1 || estadoAtual == EstadoJogo::Round2 || estadoAtual == EstadoJogo::Round3) {
-        window.draw(textoTempo);
-        window.draw(textoVidas);
+        window.draw(spriteUIJogo);
         window.draw(textoPlacar);
         window.draw(spriteMaoJogador);
-        window.draw(textoOponente);
-        window.draw(textoResultado);
+        window.draw(spriteOponente);
+        window.draw(spriteVida001);
+        window.draw(spriteVida002);
+        window.draw(spriteVida003);
     }
 
     window.display();

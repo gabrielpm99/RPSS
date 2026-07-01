@@ -2,9 +2,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <sstream>
 using namespace std;
 
-#define TEMPO_LIMITE 1.0f
+#define TEMPO_INICIAL 1.5f
+#define TEMPO_MINIMO 1.0f
 
 enum class EstadoJogo {
     Menu,
@@ -41,9 +44,13 @@ private:
     sf::Texture texturaTutorialMenu;
     sf::Sprite spriteTutorialMenu{texturaTutorialMenu};
 
+    // Textura UI do jogo
+    sf::Texture UIJogo;
+    sf::Sprite spriteUIJogo{UIJogo};
+
     // Texturas e sprites do jogador
-    sf::Texture texturaMaoIntermediaria01;
-    sf::Texture texturaMaoIntermediaria02;
+    sf::Texture texturaMaoInt01;
+    sf::Texture texturaMaoInt02;
     sf::Texture texturaMaoPapel;
     sf::Texture texturaMaoTesoura;
     sf::Texture texturaMaoPedra;
@@ -51,14 +58,35 @@ private:
     sf::Texture texturaMaoDireita;
     sf::Texture texturaMaoEsquerda;
     sf::Texture texturaMaoBaixo;
-    sf::Sprite spriteMaoJogador{texturaMaoIntermediaria01};
+    sf::Sprite spriteMaoJogador{texturaMaoInt01};
 
-    sf::Text textoOponente{fonte};
+    // Texturas e sprites do oponente
+    sf::Texture texturaOponenteInt01;
+    sf::Texture texturaOponenteInt02;
+    sf::Texture texturaOponentePapel;
+    sf::Texture texturaOponenteTesoura;
+    sf::Texture texturaOponentePedra;
+    sf::Texture texturaOponenteCimaFase02;
+    sf::Texture texturaOponenteDireitaFase02;
+    sf::Texture texturaOponenteEsquerdaFase02;
+    sf::Texture texturaOponenteBaixoFase02;
+    sf::Texture texturaOponenteCimaFase03;
+    sf::Texture texturaOponenteDireitaFase03;
+    sf::Texture texturaOponenteEsquerdaFase03;
+    sf::Texture texturaOponenteBaixoFase03;
+    sf::Texture texturaOponenteVitoria01;
+    sf::Texture texturaOponenteVitoria02;
+    sf::Texture texturaOponenteDerrota;
+    sf::Texture texturaOponenteOlhosCima;
+    sf::Texture texturaOponenteOlhosDireita;
+    sf::Texture texturaOponenteOlhosEsquerda;
+    sf::Texture texturaOponenteOlhosBaixo;
 
-    sf::Text textoResultado{fonte};
+    sf::Texture texturaFinalRodada;
+
+    sf::Sprite spriteOponente{texturaOponenteInt01};
+
     sf::Text textoPlacar{fonte};
-    sf::Text textoTempo{fonte};
-    sf::Text textoVidas{fonte}; 
 
     int escolhaJogador = 0;
     int escolhaOponente = 0;
@@ -67,7 +95,7 @@ private:
     bool jogadaFinalizada = false;
 
     sf::Clock clockPrincipal;
-    float tempoLimite = TEMPO_LIMITE;
+    float tempoLimite = TEMPO_INICIAL;
 
     sf::Clock clockAnimacaoScribbled;
     bool ehFrameScribbled01 = true;
@@ -75,8 +103,20 @@ private:
     sf::Clock clockAnimacaoMaoIntermediaria;
     bool ehFrameMao01 = true;
 
+    sf::Clock clockAnimacaoVida;
+    bool ehFrameVida01 = true;
+
     int pontuacao = 0;
+
+    sf::Texture texturaVidaCheia;
+    sf::Texture texturaVidaVazia;
+    sf::Sprite spriteVida001{texturaVidaCheia};
+    sf::Sprite spriteVida002{texturaVidaCheia};
+    sf::Sprite spriteVida003{texturaVidaCheia};
+
     int vidas = 3; 
+
+    bool resultadoCalculado = false;
 
     void processarEventos();
     void atualizar();
