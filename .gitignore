@@ -1,0 +1,5 @@
+# Arquivos executáveis
+*.exe
+*.out
+# Pastas de configuração
+.vscode/
