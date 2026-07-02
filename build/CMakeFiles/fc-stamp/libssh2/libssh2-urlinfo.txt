@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=C:/MinGW/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/Gabri/Downloads/RPSS/build/CMakeFiles/fc-stamp/libssh2/download-libssh2.cmake;COMMAND;C:/MinGW/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/Gabri/Downloads/RPSS/build/CMakeFiles/fc-stamp/libssh2/verify-libssh2.cmake;COMMAND;C:/MinGW/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/Gabri/Downloads/RPSS/build/CMakeFiles/fc-stamp/libssh2/extract-libssh2.cmake
+source_dir=C:/Users/Gabri/Downloads/RPSS/build/_deps/libssh2-src
+work_dir=C:/Users/Gabri/Downloads/RPSS/build/_deps
+url(s)=https://github.com/libssh2/libssh2/archive/704299e997bf518375dc9222670c57b800ac59e6.tar.gz
+hash=SHA256=10c3a28bf3099b2a4a6c21a7f4a180fb1bacf5ee6560ccc5542e62f762b2f4f1
+      no_extract=
+

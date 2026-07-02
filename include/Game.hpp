@@ -32,6 +32,9 @@ private:
     // Variável que cria a janela
     sf::RenderWindow window;
 
+    // Variável que armazena o ícone do jogo
+    sf::Image icone;
+
     // Variáveis de controle de estado do jogo
     EstadoJogo estadoAtual;
     EstadoJogo proximoEstado;

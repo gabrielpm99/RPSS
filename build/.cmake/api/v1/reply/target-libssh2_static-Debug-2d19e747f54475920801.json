@@ -1,0 +1,854 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/sfml-build/lib/libssh2.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"set_property",
+			"target_compile_options",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"build/_deps/libssh2-src/src/CMakeLists.txt",
+			"build/_deps/sfml-src/src/SFML/Network/CMakeLists.txt",
+			"build/_deps/libssh2-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 188,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 115,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 130,
+				"parent" : 4
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 402,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 268,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 126,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 122,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 127,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-W"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-pedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wbad-function-cast"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Winline"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-declarations"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-prototypes"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnested-externs"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-long-long"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-multichar"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshadow"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-compare"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wundef"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wwrite-strings"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Waddress"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wattributes"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wcast-qual"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wdeclaration-after-statement"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wdiv-by-zero"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wempty-body"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wendif-labels"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wfloat-equal"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wformat-security"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wignored-qualifiers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-field-initializers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-noreturn"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-format-nonliteral"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-system-headers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wold-style-definition"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wredundant-decls"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-error=sign-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wstrict-prototypes"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wtype-limits"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunreachable-code"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-macros"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-parameter"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wvla"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wclobbered"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-parameter-type"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wold-style-declaration"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpragmas"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wstrict-aliasing=3"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-ftree-vrp"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wjump-misses-init"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-pedantic-ms-format"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wdouble-promotion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wformat=2"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wtrampolines"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Warray-bounds=2"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wduplicated-cond"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnull-dereference"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fdelete-null-pointer-checks"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshift-negative-value"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshift-overflow=2"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-const-variable"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Walloc-zero"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wduplicated-branches"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wformat-overflow=2"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wformat-truncation=2"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wimplicit-fallthrough"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wrestrict"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Warith-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wenum-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Warray-compare"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wenum-int-mismatch"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wxor-used-as-pow"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-w"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "LIBSSH2DEBUG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "LIBSSH2_MBEDTLS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "LIBSSH2_NO_DEPRECATED"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/Gabri/Downloads/RPSS/build/_deps/libssh2-build/src"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/Gabri/Downloads/RPSS/build/_deps/libssh2-src/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "C:/Users/Gabri/Downloads/RPSS/build/_deps/mbedtls-src/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Dependencies"
+	},
+	"id" : "libssh2_static::@e6fd7acc6339b6a0e9ab",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/Jankenpo"
+		}
+	},
+	"name" : "libssh2_static",
+	"nameOnDisk" : "libssh2.a",
+	"paths" : 
+	{
+		"build" : "_deps/libssh2-build/src",
+		"source" : "build/_deps/libssh2-src/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/agent.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/bcrypt_pbkdf.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/chacha.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/channel.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/cipher-chachapoly.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/comp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/crypt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/global.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/hostkey.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/keepalive.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/kex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/knownhost.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/libgcrypt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/mac.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/mbedtls.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/misc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/openssl.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/os400qc3.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/packet.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/pem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/poly1305.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/publickey.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/scp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/session.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/sftp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/transport.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/userauth.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/userauth_kbd_packet.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/version.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/libssh2-src/src/wincng.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/chacha.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/channel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/cipher-chachapoly.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/comp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/crypto.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/crypto_config.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/libgcrypt.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/libssh2_priv.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/libssh2_setup.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/mac.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/mbedtls.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/misc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/openssl.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/os400qc3.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/packet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/poly1305.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/session.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/sftp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/transport.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/userauth.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/userauth_kbd_packet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/libssh2-src/src/wincng.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

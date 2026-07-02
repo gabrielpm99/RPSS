@@ -16,6 +16,10 @@ Game::Game()
         textoPlacar.setLetterSpacing(12.0f);
     }
 
+    if(icone.loadFromFile("../assets/iconrpss/icone.png")) {
+        window.setIcon(icone);
+    }
+
     carregarTexturas();
 
     // Ajusta a tela de transição ao tamanho da tela do jogo
