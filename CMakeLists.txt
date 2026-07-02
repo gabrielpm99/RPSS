@@ -28,4 +28,4 @@ add_executable(jankenpo ${SOURCES})
 target_link_options(jankenpo PRIVATE -static -static-libgcc -static-libstdc++)
 
 # Define as bibliotecas que devem ser adicionadas ao executável
-target_link_libraries(jankenpo PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Main)
+target_link_libraries(jankenpo PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Main SFML::Audio)
