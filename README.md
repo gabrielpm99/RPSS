@@ -15,14 +15,14 @@ O round 3 consiste em tentar evitar que o NPC adivinhe para que posição o play
 Se o player perde este tipo de round ele perde uma vida.
 
 # Requisitos:
-## --compilador C++;
-## --biblioteca sfml;
-## --cmake.
+- Compilador C++;
+* Biblioteca sfml;
++ Cmake.
 
 # Setup:
 
 
 # integrantes:
-## Gabriel Pinheiro Maia;
-## Pedro Augusto Carvalho de Freitas Gouveia Fidalgo;
-## Vitor Cavalcante Borges.
+- Gabriel Pinheiro Maia;
+* Pedro Augusto Carvalho de Freitas Gouveia Fidalgo;
++ Vitor Cavalcante Borges.
