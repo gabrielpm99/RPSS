@@ -17,6 +17,7 @@ FetchContent_Declare(
     GIT_TAG 3.1.0
 )
 # Manda baixar
+set(BUILD_SHARED_LIBS ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(SFML)
 
 # Organiza todos os arquivos de implementação (.cpp)
@@ -24,8 +25,28 @@ file(GLOB SOURCES "src/*.cpp")
 # Cria o arquivo executável, com base nos arquivos do SOURCES definido anteriormente
 add_executable(jankenpo ${SOURCES})
 
+set_target_properties(jankenpo PROPERTIES
+    LINK_SEARCH_START_STATIC OFF
+    LINK_SEARCH_END_STATIC OFF
+)
+
 # Cola as bibliotecas do C++ dentro do executável
-target_link_options(jankenpo PRIVATE -static -static-libgcc -static-libstdc++)
+target_link_options(jankenpo PRIVATE "-Bdynamic")
 
 # Define as bibliotecas que devem ser adicionadas ao executável
-target_link_libraries(jankenpo PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Main SFML::Audio)
+target_link_libraries(jankenpo PRIVATE
+    sfml-graphics
+    sfml-window
+    sfml-system
+    SFML::Audio
+)
+
+# Comando para copiar automaticamente os DLLs para a pasta onde o executável foi criado
+if(WIN32)
+    add_custom_command(TARGET jankenpo POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_BINARY_DIR}/_deps/sfml-build/bin"
+        "$<TARGET_FILE_DIR:jankenpo>"
+        COMMENT "Copiando arquivos DLL do SFML da pasta bin para a pasta de build..."
+    )
+endif()

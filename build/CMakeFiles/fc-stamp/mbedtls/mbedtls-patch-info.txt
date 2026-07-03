@@ -1,0 +1,6 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The update step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command=C:/MinGW/mingw64/bin/cmake.exe;-DMBEDTLS_DIR=C:/Users/Gabri/Downloads/RPSS/build/_deps/mbedtls-src;-P;C:/Users/Gabri/Downloads/RPSS/build/_deps/sfml-src/tools/mbedtls/PatchMbedTLS.cmake
+work_dir=C:/Users/Gabri/Downloads/RPSS/build/_deps/mbedtls-src

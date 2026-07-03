@@ -1,0 +1,1 @@
+ "../../../lib/libsfml-system-d.a" ../../../lib/libvorbisd.a ../../../lib/libvorbisfiled.a ../../../lib/libvorbisencd.a ../../../lib/libFLACd.a ../../../lib/libvorbisd.a ../../../lib/liboggd.a -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
