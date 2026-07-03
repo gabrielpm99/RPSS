@@ -41,6 +41,8 @@ target_link_libraries(RPSS PRIVATE
     SFML::Audio
 )
 
+set(CMAKE_TLS_VERIFY FALSE)
+
 # Comando para copiar automaticamente os DLLs para a pasta onde o executável foi criado
 if(WIN32)
     add_custom_command(TARGET RPSS POST_BUILD
