@@ -3,3 +3,4 @@
 *.out
 # Pastas de configuração
 .vscode/
+build/

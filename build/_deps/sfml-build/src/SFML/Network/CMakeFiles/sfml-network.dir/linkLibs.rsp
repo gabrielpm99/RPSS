@@ -1,1 +1,0 @@
- "../../../lib/libsfml-system-d.a" -lCrypt32 -lws2_32 -lDnsapi ../../../lib/libssh2.a ../../../lib/libmbedtlsd.a ../../../lib/libmbedcryptod.a ../../../lib/libmbedx509d.a ../../../lib/libmbedcryptod.a -lws2_32 -lbcrypt -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
